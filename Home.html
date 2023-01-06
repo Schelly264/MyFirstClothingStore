@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <div class= "flex-header">
-       <div style= "padding-top: 20px;
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <div class="flex-header">
+    <div style="padding-top: 20px;
                     padding-bottom: 20px;
                     padding-left: 20px;
-                    padding-right: 20px;"> 
-                    <img src= "img/Logo.png" 
-                    width="140" 
-                    height="90"
-                    >
-        </div>
-        <div style="color: black;
+                    padding-right: 20px;">
+      <img src="img/Logo.png" width="140" height="90">
+    </div>
+    <div style="color: black;
                    text-align: center;
                    font-size:  36pt; 
                    font-family: Arial Black;
@@ -20,9 +20,9 @@
                    padding-left: 20px;
                    padding-right: 20px;
                    ">
-                  HOME
-         </div>
-         <button type="button" id="login" onclick=login() style=	"color: black;
+      HOME
+    </div>
+    <button type="button" id="login" onclick=login() style="color: black;
                   text-align: center;
                   font-size:  10pt; 
                   font-family: Arial Black;
@@ -31,13 +31,14 @@
                   padding-bottom: 20px;
                   padding-left: 20px;
                   padding-right: 20px;
-                  "> 
-                  Einloggen 
-          </button>
-      </div>
-  </head>
-  <body>
-    <style>
+                  ">
+      Einloggen
+    </button>
+  </div>
+</head>
+
+<body>
+  <style>
     .flex-container {
       display: flex;
     }
@@ -57,227 +58,256 @@
       padding-right: 3px;
     }
 
+    .content {
+      flex-direction: column;
+    }
+
     .footer {
-       display: flex;
-       flex-direction: row;
-       background-color: #f1f1f1;
-       padding-top: 10px;
-       padding-bottom: 10px;
-       padding-left: 10px;
-       padding-right: 10px;
-       align-items: center;
-       justify-content: center;
+      display: flex;
+      flex-direction: row;
+      background-color: #f1f1f1;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      align-items: center;
+      justify-content: center;
     }
 
     .footerElement {
-       color: black;
-       font-size: 12px;
-       color: black;
-       font-family: Arial;
-       padding-left: 20px;
-       padding-right: 20px;
+      color: black;
+      font-size: 12px;
+      color: black;
+      font-family: Arial;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .footerElement:hover {
-       color: red;
+      color: red;
     }
 
-    .tab{
-      font-size:  12pt; 
+    .tab {
+      font-size: 12pt;
       font-family: Arial Black;
       padding-left: 10px;
       padding-right: 20px;
+      cursor: pointer;
     }
 
     .tab:hover {
       color: red;
     }
-    
-    </style>
-  	<script>
-  
-      function login(){
-        var tmp = document.getElementById('login').innerHTML;
-            if (tmp == "Ausloggen") {
-                document.getElementById('login').innerHTML = "Einloggen";
-            } else {
-                document.getElementById('login').innerHTML = "Ausloggen";
-            }
-        }
+  </style>
+  <script>
 
-	function updateShoppingCart(amount){
-              if (amount == 0){
-              document.getElementById('shoppingCart').src = "img/shoppingcart.jpeg";
-            } else if (amount == 1) {
-              document.getElementById('shoppingCart').src = "img/shoppingcart_1.jpeg";
-            } else if (amount == 2){
-              document.getElementById('shoppingCart').src = "img/shoppingcart_2.jpeg";
-            } else if (amount == 3){
-              document.getElementById('shoppingCart').src = "img/shoppingcart_3.jpeg";
-            } else {
-             document.getElementById('shoppingCart').src = "img/shoppingcart_x.jpeg";
-            }
-        }
+    function login() {
+      var tmp = document.getElementById('login').innerHTML;
+      if (tmp == "Ausloggen") {
+        document.getElementById('login').innerHTML = "Einloggen";
+      } else {
+        document.getElementById('login').innerHTML = "Ausloggen";
+      }
+    }
 
-      </script>
-  </body>
-  <div class= "flex-container">
-    <div class= "flex-containerMenuLeft">
-          <div style=   "
+    function updateShoppingCart(amount) {
+      if (amount == 0) {
+        document.getElementById('shoppingCart').src = "img/shoppingcart.jpeg";
+      } else if (amount == 1) {
+        document.getElementById('shoppingCart').src = "img/shoppingcart_1.jpeg";
+      } else if (amount == 2) {
+        document.getElementById('shoppingCart').src = "img/shoppingcart_2.jpeg";
+      } else if (amount == 3) {
+        document.getElementById('shoppingCart').src = "img/shoppingcart_3.jpeg";
+      } else {
+        document.getElementById('shoppingCart').src = "img/shoppingcart_x.jpeg";
+      }
+    }
+
+    var selectedProduct = null
+
+    function showDetailView(product) {
+      $(function () {
+        if (selectedProduct) {
+          $("#" + selectedProduct).css("visibility", "hidden");
+        }
+        $("#" + product).css("visibility", "visible");
+        selectedProduct = product;
+      });
+    }
+
+    $(window).on("message", function (m) {
+      const message = JSON.parse(m.originalEvent.data);
+      $(message.item).attr(message.attr, message.value);
+    });
+
+  </script>
+</body>
+<div class="flex-container">
+  <div class="flex-containerMenuLeft">
+    <div style="
                       font-size:  20pt; 
                       font-family: Arial Black;
                       padding-top: 10px;
                       padding-left: 10px;
                       padding-right: 20px;
                       padding-bottom: 10px
-                      "> 
-                      Kategorien
-          </div>
-          <div class= "tab">
-              <div> - Kopf </div>
-          </div>
-      	  <div class= "tab">
-        	  <div style=   "
+                      ">
+      Kategorien
+    </div>
+    <div class="tab">
+      <div> - Kopf </div>
+    </div>
+    <div class="tab">
+      <div style="
                      		padding-left: 20px
-                      		"> 
-                      		- Ohrringe
-              </div>
-      	  </div>
-      	  <div class= "tab">
-      		  <div style=   "
+                      		">
+        - Ohrringe
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
                       		padding-left: 20px
                        	    ">
-                            - Mützen
-              </div>
-          </div>
-          <div class= "tab">
-              <div style=   "
+        - Mützen
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
                              padding-left: 20px
                              ">
-                             - Sonnenbrillen
-               </div>
-           </div>
-           <div class= "tab">
-              <div style=   "
-                              padding-left: 20px;
-                              padding-bottom: 15px
-                              ">
-                              - Schals
-               </div>
-            </div>
-            <div class= "tab">
-                <div> - Oberkörper </div>
-			</div>
-            <div class= "tab">
-              <div style=   "
-                              padding-left: 20px
-                              ">
-                              - T-Shirts
-               </div>
-            </div>
-            <div class= "tab">
-              <div style=    "
-                              padding-left: 20px
-                              ">
-                              - Jacken
-               </div>
-            </div>
-            <div class= "tab">
-              <div style=   "
-                              padding-left: 20px;
-                              padding-bottom: 15px
-                              ">
-                              - Pullover
-               </div>
-             </div>
-             <div class= "tab">
-                <div> - Unterkörper </div>
-             </div>
-             <div class= "tab">
-               <div style=   "
-                              padding-left: 20px
-                              ">
-                              - Hosen
-                </div>
-              </div>
-              <div class= "tab">
-              	<div style=   "
-                              padding-left: 20px
-                              ">
-                              - Gürtel
-                </div>
-              </div>
-              <div class= "tab">
-              	<div style=   "
-                              padding-left: 20px
-                              ">
-                              - Shorts
-                </div>
-              </div>
-              <div class= "tab">
-              	<div style=   "
-                              padding-left: 20px;
-                              padding-bottom: 15px
-                              ">
-                              - Röcke
-                </div>
-              </div>
-              <div class= "tab">
-                <div> - Hand </div>
-              </div>
-              <div class= "tab">
-                 <div style=   "
-                              padding-left: 20px
-                              ">
-                              Handschuhe
-                </div>
-              </div>
-              <div class= "tab">
-              	<div style=   "
-                              padding-left: 20px
-                              ">
-                              Ringe
-                </div>
-              </div>
-              <div class= "tab">
-              	<div style=   "
-                              padding-left: 20px;
-                              padding-bottom: 15px
-                              ">
-                              Armreife
-                </div>
-              </div>
-              <div class= "tab">
-                <div> - Füße </div>
-              </div>
-              <div class= "tab">
-                 <div style=   "
-                              padding-left: 20px
-                              ">
-                              Schuhe
-                </div>
-              </div>
-              <div class= "tab">
-             	 <div style=   "
-                              padding-left: 20px;
-                              padding-bottom: 15px
-                              "> 
-                              Socken
-                </div>
-              </div>
-              <div class= "tab">
-                <div> - Angebote </div>
-              </div>
+        - Sonnenbrillen
       </div>
-      <div style =  "position: absolute;
-                  right: 20px;
-		  			bottom: 50px;"> 
-		<a href="warenkorb.html">
-			<img border="0" src="img/shoppingcart.jpeg" width="100" height="100">
-  		 </a>
-	</div>
     </div>
-  <div class="footer" style = "
+    <div class="tab">
+      <div style="
+                              padding-left: 20px;
+                              padding-bottom: 15px
+                              ">
+        - Schals
+      </div>
+    </div>
+    <div class="tab">
+      <div> - Oberkörper </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px;" onclick="showDetailView('t-shirts')">
+        - T-Shirts
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px" onclick="showDetailView('jacken')">
+        - Jacken
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px;
+                              padding-bottom: 15px
+                              " onclick="showDetailView('pullover')">
+        - Pullover
+      </div>
+    </div>
+    <div class="tab">
+      <div> - Unterkörper </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px
+                              ">
+        - Hosen
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px
+                              ">
+        - Gürtel
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px
+                              ">
+        - Shorts
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px;
+                              padding-bottom: 15px
+                              ">
+        - Röcke
+      </div>
+    </div>
+    <div class="tab">
+      <div> - Hand </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px
+                              ">
+        Handschuhe
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px
+                              ">
+        Ringe
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px;
+                              padding-bottom: 15px
+                              ">
+        Armreife
+      </div>
+    </div>
+    <div class="tab">
+      <div> - Füße </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px
+                              ">
+        Schuhe
+      </div>
+    </div>
+    <div class="tab">
+      <div style="
+                              padding-left: 20px;
+                              padding-bottom: 15px
+                              ">
+        Socken
+      </div>
+    </div>
+    <div class="tab">
+      <div> - Angebote </div>
+    </div>
+  </div>
+  <div style="position: absolute;
+                  right: 20px;
+		  			bottom: 50px;">
+    <a href="warenkorb.html">
+      <img id="shoppingCart" border="0" src="img/shoppingcart.jpeg" width="100" height="100">
+    </a>
+  </div>
+  <div class="content">
+    <div class="detailView" style="position:relative;">
+      <embed style="position:absolute; visibility:hidden; height:100vh; width:100vw;" id="t-shirts"
+        src="./detailView.html?product=T-Shirts" />
+      <embed style="position:absolute; visibility:hidden; height:100vh; width:100vw;" id="jacken"
+        src="./detailView.html?product=Jacken" />
+      <embed style="position:absolute; visibility:hidden; height:100vh; width:100vw;" id="pullover"
+        src="./detailView.html?product=Pullover" />
+    </div>
+
+  </div>
+  <div class="footer" style="
  							  position: absolute;
                               width: 100%;
   							  bottom:0px;
@@ -292,4 +322,5 @@
     <div> - </div>
     <div class="footerElement"> Datenschutz </div>
   </div>
+
 </html>
