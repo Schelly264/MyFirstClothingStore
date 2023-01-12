@@ -13,8 +13,7 @@ body {
     display: flex; 
     flex-direction: column;
     background-color: #e0e0e0;
-    padding: 110px;
-    justify-content: center;
+    padding: 72px;
 }
 
 .header {
@@ -23,53 +22,45 @@ body {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  min-height:25px;
+  background-color: #f1f1f1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerElement {
+  color: black;
+  font-size: 12px;
+  color: black;
+  font-family: Arial;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footerElement:hover {
+  color: red;
+}
+
 .header-navbar {
     overflow: hidden;
     margin-top: 16px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 10px;
-    height: 40px;
+    height: 90px;
     cursor: pointer;
 }
 
 .header-navbar-cropped {
-    width: 60px;
-    height: 60px;
-    margin: -10px -10px -10px -10px;
-}
-
-.header-navbar:hover {
-    background: #E0E0E0;
-    padding: 0 ;
-}
-
-.header-name {
-    margin-left: 20px;
-}
-
-.header {
-    display: flex;
-    position: relative;
-}
-
-.header-navbar {
-    overflow: hidden;
-    margin-top: 16px;
-    border-radius: 10px;
-    height: 40px;
-    cursor: pointer;
-}
-
-.header-navbar-cropped {
-    width: 60px;
-    height: 60px;
-    margin: -10px -10px -10px -10px;
-}
-
-.header-navbar:hover {
-    background: #E0E0E0;
-    padding: 0 ;
+    width: 140px;
+    height: 90px;
 }
 
 .header-name {
@@ -95,7 +86,6 @@ body {
 .header span {
     flex: 1;
 }
-
 .thank-you-text {
     font-size: 50px;
     margin-top: 40px;

@@ -35,12 +35,32 @@ body {
 .header-navbar-cropped {
     width: 140px;
     height: 90px;
-    margin: -10px -10px -10px -10px;
 }
 
-.header-navbar:hover {
-    background: #E0E0E0;
-    padding: 0 ;
+.footer {
+  display: flex;
+  flex-direction: row;
+  min-height:25px;
+  background-color: #f1f1f1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerElement {
+  color: black;
+  font-size: 12px;
+  color: black;
+  font-family: Arial;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footerElement:hover {
+  color: red;
 }
 
 .header-name {
@@ -48,19 +68,12 @@ body {
 }
 
 .header-shopping-cart {
-    background: #F6F5F3;
-    border-radius: 10px;
-    width: 35px;
-    height: 33px;
+    width: 70px;
+    height: 70px;
     margin-top: 16px;
     padding: 5px 10px 5px 10px;
     position: absolute;
     right: 20px;
-    cursor: pointer;
-}
-
-.header-shopping-cart:hover {
-    background-color: #f1eeea;
 }
 
 .header span {

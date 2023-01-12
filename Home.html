@@ -4,6 +4,34 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="main.js"></script>
+  <script> function checkOnlyOne(checkbox){
+	var check_1 = document.getElementById('order-1');
+	var check_2 = document.getElementById('order-2');
+	var check_3 = document.getElementById('order-3');
+	var check_4 = document.getElementById('order-4');
+
+	if (checkbox == 1 && check_1.checked == true){
+			check_2.checked = false;
+			check_3.checked = false
+			check_4.checked = false
+	}
+	if (checkbox == 2 && check_2.checked == true){
+			check_1.checked = false;
+			check_3.checked = false
+			check_4.checked = false
+	}
+	if (checkbox == 3 && check_3.checked == true){
+			check_1.checked = false;
+			check_2.checked = false
+			check_4.checked = false
+	}
+	if (checkbox == 4 && check_4.checked == true){
+			check_1.checked = false;
+			check_2.checked = false
+			check_3.checked = false
+	}
+  }
+</script>
   <link href="style.css" rel="stylesheet">
 </head>
 
@@ -34,7 +62,7 @@
         </div>
         <ul class="menu"> 
             <li>
-                <a>- Kopf</a>
+                <a href="overview.html">- Kopf</a>
                 <ul class="menu">
                     <li><a href="overview.html">- Ohrringe</a><li>
                     <li><a href="overview.html">- Mützen</a><li>
@@ -43,7 +71,7 @@
                 </ul>
             <li>
             <li>
-                <a>- Oberkörper</a>
+                <a href="overview.html">- Oberkörper</a>
                 <ul class="menu">
                     <li><a href="overview.html">- T-Shirts</a><li>
                     <li><a href="overview.html">- Jacken</a><li>
@@ -51,7 +79,7 @@
                 </ul>
             <li>
             <li>
-                <a>- Unterkörper</a>
+                <a href="overview.html">- Unterkörper</a>
                 <ul class="menu">
                     <li><a href="overview.html">- Hosen</a><li>
                     <li><a href="overview.html">- Gürtel</a><li>
@@ -60,7 +88,7 @@
                 </ul>
             <li>
             <li>
-                <a>- Hand</a>
+                <a href="overview.html">- Hand</a>
                 <ul class="menu">
                     <li><a href="overview.html">- Handschuhe</a><li>
                     <li><a href="overview.html">- Ringe</a><li>
@@ -68,14 +96,14 @@
                 </ul>
             <li>
             <li>
-                <a>- Füße</a>
+                <a href="overview.html">- Füße</a>
                 <ul class="menu">
                     <li><a href="overview.html">- Schuhe</a><li>
                     <li><a href="overview.html">- Socken</a><li>
                 </ul>
             <li>
             <li>
-                <a>- Angebote</a>
+                <a href="overview.html">- Angebote</a>
             <li>
         </ul>
     </div>
@@ -135,13 +163,13 @@
             </div>
             <div class="filter-column">
                 <h3>Sortieren nach</h3>
-                <input type="checkbox" id="order-1" name="order-1">
+                <input type="checkbox" id="order-1" name="order-1" onclick="checkOnlyOne(1)">
                 <label class="filter-label"for="order-1">Preis aufsteigend</label><br>
-                <input type="checkbox" id="order-2" name="order-2">
+                <input type="checkbox" id="order-2" name="order-2" onclick="checkOnlyOne(2)">
                 <label class="filter-label"or="order-2">Preis absteigend</label><br>
-                <input type="checkbox" id="order-3" name="order-3">
+                <input type="checkbox" id="order-3" name="order-3" onclick="checkOnlyOne(3)">
                 <label class="filter-label"for="order-3">Neuheiten</label><br>
-                <input type="checkbox" id="order-4" name="order-4">
+                <input type="checkbox" id="order-4" name="order-4" onclick="checkOnlyOne(4)">
                 <label class="filter-label"for="order-4">Angebote</label><br>
             </div>
         </div>
@@ -162,8 +190,6 @@
     <div class="footerElement" onclick="location.href='FooterSites/AGB.html'"> AGB </div>
     <div> - </div>
     <div class="footerElement" onclick="location.href='FooterSites/Impressum.html'"> Impressum </div>
-    <div> - </div>
-    <div class="footerElement"> Sprache </div>
     <div> - </div>
     <div class="footerElement"> Datenschutz </div>
   </footer>

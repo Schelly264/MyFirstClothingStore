@@ -22,12 +22,12 @@
 <body>
     <div class="header">
         <div class="header-navbar">
-            <img src="../img/Logo.png" alt="navbar" class="header-navbar-cropped">
+            <img src="../img/Logo.png" alt="navbar" class="header-navbar-cropped" onclick="location.href='../Home.html'">
         </div>
         <h1 class="header-name">
             MyFirstClothingStore
         </h1>
-        <img src="../img/shopping_cart.png" alt="shopping_cart" class="header-shopping-cart">
+        <img src="../img/shoppingcart.jpeg" class="header-shopping-cart">
     </div>
 
     <div class="flex-container">
@@ -81,7 +81,7 @@
                             <button class="mfcs-button button-detail">
                                 Details anzeigen 
                             </button>
-                            <button class="mfcs-button button-delete">
+                            <button class="mfcs-button button-delete" onclick="location.href='../Home.html'">
                                 Löschen
                             </button>
                         </div>
@@ -100,8 +100,12 @@ onclick="location.href='../Bestellung/bestellung.html'">
             </div>
         </div>
     </div>
-    <div class="footer">
-            <a style="padding-right: 10px;" href="../FooterSites/Impressum.html">Impressum</a><a style="padding-left: 10px;" href="../FooterSites/AGB.html">AGB</a>
-        </div>
+    <footer class="footer" style="width: 100%; margin: 0px; margin-top: auto;">
+    <div class="footerElement" onclick="location.href='FooterSites/AGB.html'"> AGB </div>
+    <div> - </div>
+    <div class="footerElement" onclick="location.href='FooterSites/Impressum.html'"> Impressum </div>
+    <div> - </div>
+    <div class="footerElement"> Datenschutz </div>
+  </footer>
 </body>
 </html>
