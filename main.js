@@ -29,9 +29,9 @@ var selectedProduct = null
 function showDetailView(product) {
   $(function () {
     if (selectedProduct) {
-      $("#" + selectedProduct).css("display", "none");
+      $("#" + selectedProduct).css("visibility", "visible");
     }
-    $("#" + product).css("display", "inline");
+    $("#" + product).css("visibility", "visible");
     $(".overview-grid").css("display", "none");
     selectedProduct = product;
   });

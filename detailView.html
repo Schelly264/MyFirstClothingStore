@@ -50,7 +50,7 @@
                 <button style="margin-left:15px;" onclick="updateCart()">in den Warenkorb</button>
             </div>
         </div>
-        <div class="view img-magnifier-container">s
+        <div class="view img-magnifier-container">
             <img id="large" alt="" height="400vh" />
         </div>
 
@@ -186,7 +186,7 @@
                 message = JSON.stringify({
                     item: "#" + productName,
                     attr: "style",
-                    value: "display: none",
+                    value: "visibility: hidden",
                 });
                 parent.postMessage(message, "*");
                 //$("#t-shirts").css("visibility", "none");
