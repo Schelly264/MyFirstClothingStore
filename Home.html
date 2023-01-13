@@ -4,42 +4,42 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="main.js"></script>
-  <script> function checkOnlyOne(checkbox){
-	var check_1 = document.getElementById('order-1');
-	var check_2 = document.getElementById('order-2');
-	var check_3 = document.getElementById('order-3');
-	var check_4 = document.getElementById('order-4');
+  <script> function checkOnlyOne(checkbox) {
+      var check_1 = document.getElementById('order-1');
+      var check_2 = document.getElementById('order-2');
+      var check_3 = document.getElementById('order-3');
+      var check_4 = document.getElementById('order-4');
 
-	if (checkbox == 1 && check_1.checked == true){
-			check_2.checked = false;
-			check_3.checked = false
-			check_4.checked = false
-	}
-	if (checkbox == 2 && check_2.checked == true){
-			check_1.checked = false;
-			check_3.checked = false
-			check_4.checked = false
-	}
-	if (checkbox == 3 && check_3.checked == true){
-			check_1.checked = false;
-			check_2.checked = false
-			check_4.checked = false
-	}
-	if (checkbox == 4 && check_4.checked == true){
-			check_1.checked = false;
-			check_2.checked = false
-			check_3.checked = false
-	}
-  }
-</script>
+      if (checkbox == 1 && check_1.checked == true) {
+        check_2.checked = false;
+        check_3.checked = false
+        check_4.checked = false
+      }
+      if (checkbox == 2 && check_2.checked == true) {
+        check_1.checked = false;
+        check_3.checked = false
+        check_4.checked = false
+      }
+      if (checkbox == 3 && check_3.checked == true) {
+        check_1.checked = false;
+        check_2.checked = false
+        check_4.checked = false
+      }
+      if (checkbox == 4 && check_4.checked == true) {
+        check_1.checked = false;
+        check_2.checked = false
+        check_3.checked = false
+      }
+    }
+  </script>
   <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="flex-header">
+  <div class="flex-header">
     <div class="brand-logo">
-    <a href="Home.html">
-      <img src="img/Logo.png" width="140" height="90">
+      <a href="Home.html">
+        <img src="img/Logo.png" width="140" height="90">
       </a>
     </div>
     <div id="main-title">
@@ -57,136 +57,152 @@
   </div>
   <div class="flex-container">
     <div class="flex-containerMenuLeft">
-        <div id="category-title">
-          Kategorien
-        </div>
-        <ul class="menu"> 
+      <div id="category-title">
+        Kategorien
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="overview.html">- Kopf</a>
+          <ul class="menu">
+            <li><a href="overview.html">- Ohrringe</a>
             <li>
-                <a href="overview.html">- Kopf</a>
-                <ul class="menu">
-                    <li><a href="overview.html">- Ohrringe</a><li>
-                    <li><a href="overview.html">- Mützen</a><li>
-                    <li><a href="overview.html">- Sonnenbrillen</a><li>
-                    <li><a href="overview.html">- Schals</a><li>
-                </ul>
+            <li><a href="overview.html">- Mützen</a>
             <li>
+            <li><a href="overview.html">- Sonnenbrillen</a>
             <li>
-                <a href="overview.html">- Oberkörper</a>
-                <ul class="menu">
-                    <li><a href="overview.html">- T-Shirts</a><li>
-                    <li><a href="overview.html">- Jacken</a><li>
-                    <li><a href="overview.html">- Pullover</a><li>
-                </ul>
+            <li><a href="overview.html">- Schals</a>
             <li>
+          </ul>
+        <li>
+        <li>
+          <a href="overview.html">- Oberkörper</a>
+          <ul class="menu">
+            <li><a href="overview.html">- T-Shirts</a>
             <li>
-                <a href="overview.html">- Unterkörper</a>
-                <ul class="menu">
-                    <li><a href="overview.html">- Hosen</a><li>
-                    <li><a href="overview.html">- Gürtel</a><li>
-                    <li><a href="overview.html">- Shorts</a><li>
-                    <li><a href="overview.html">- Röcke</a><li>
-                </ul>
+            <li><a href="overview.html">- Jacken</a>
             <li>
+            <li><a href="overview.html">- Pullover</a>
             <li>
-                <a href="overview.html">- Hand</a>
-                <ul class="menu">
-                    <li><a href="overview.html">- Handschuhe</a><li>
-                    <li><a href="overview.html">- Ringe</a><li>
-                    <li><a href="overview.html">- Armreife</a><li>
-                </ul>
+          </ul>
+        <li>
+        <li>
+          <a href="overview.html">- Unterkörper</a>
+          <ul class="menu">
+            <li><a href="overview.html">- Hosen</a>
             <li>
+            <li><a href="overview.html">- Gürtel</a>
             <li>
-                <a href="overview.html">- Füße</a>
-                <ul class="menu">
-                    <li><a href="overview.html">- Schuhe</a><li>
-                    <li><a href="overview.html">- Socken</a><li>
-                </ul>
+            <li><a href="overview.html">- Shorts</a>
             <li>
+            <li><a href="overview.html">- Röcke</a>
             <li>
-                <a href="overview.html">- Angebote</a>
+          </ul>
+        <li>
+        <li>
+          <a href="overview.html">- Hand</a>
+          <ul class="menu">
+            <li><a href="overview.html">- Handschuhe</a>
             <li>
-        </ul>
+            <li><a href="overview.html">- Ringe</a>
+            <li>
+            <li><a href="overview.html">- Armreife</a>
+            <li>
+          </ul>
+        <li>
+        <li>
+          <a href="overview.html">- Füße</a>
+          <ul class="menu">
+            <li><a href="overview.html">- Schuhe</a>
+            <li>
+            <li><a href="overview.html">- Socken</a>
+            <li>
+          </ul>
+        <li>
+        <li>
+          <a href="overview.html">- Angebote</a>
+        <li>
+      </ul>
     </div>
     <div class="content">
       <div class="filter-area">
         <h2 class="filter-title">Filter/Sortierung</h2>
         <div class="filter-grid">
-            <div class="filter-column">
-                <h3>Saison</h3>
-                <input type="checkbox" id="season-1" name="season-1">
-                <label class="filter-label"for="season-1">Frühjahr</label><br>
-                <input type="checkbox" id="season-2" name="season-2">
-                <label class="filter-label"or="season-2">Sommer</label><br>
-                <input type="checkbox" id="season-3" name="season-3">
-                <label class="filter-label"for="season-3">Herbst</label><br>
-                <input type="checkbox" id="season-4" name="season-4">
-                <label class="filter-label"for="season-4">Winter</label><br>
-            </div>
-            <div class="filter-column">
-                <h3>Geschlecht</h3>
-                <input type="checkbox" id="gender-1" name="gender-1">
-                <label class="filter-label"for="gender-1">Frauen</label><br>
-                <input type="checkbox" id="gender-2" name="gender-2">
-                <label class="filter-label"or="gender-2">Männer</label><br>
-                <input type="checkbox" id="gender-3" name="gender-3">
-                <label class="filter-label"for="gender-3">Mädchen</label><br>
-                <input type="checkbox" id="gender-4" name="gender-4">
-                <label class="filter-label"for="gender-4">Jungen</label><br>
-                <input type="checkbox" id="gender-5" name="gender-5">
-                <label class="filter-label"for="gender-5">Unisex</label><br>
-            </div>
-            <div class="filter-column">
-                <h3>Größe</h3>
-                <input type="checkbox" id="size-1" name="size-1">
-                <label class="filter-label"for="size-1">XS</label><br>
-                <input type="checkbox" id="size-2" name="size-2">
-                <label class="filter-label"or="size-2">S</label><br>
-                <input type="checkbox" id="size-3" name="size-3">
-                <label class="filter-label"for="size-3">M</label><br>
-                <input type="checkbox" id="size-4" name="size-4">
-                <label class="filter-label"for="size-4">L</label><br>
-                <input type="checkbox" id="size-5" name="size-5">
-                <label class="filter-label"for="size-5">XL</label><br>
-            </div>
-            <div class="filter-column">
-                <h3>Marke</h3>
-                <input type="checkbox" id="brand-1" name="brand-1">
-                <label class="filter-label"for="brand-1">Gucci</label><br>
-                <input type="checkbox" id="brand-2" name="brand-2">
-                <label class="filter-label"or="brand-2">Prada</label><br>
-                <input type="checkbox" id="brand-3" name="brand-3">
-                <label class="filter-label"for="brand-3">Dior</label><br>
-                <input type="checkbox" id="brand-4" name="brand-4">
-                <label class="filter-label"for="brand-4">Hugo Boss</label><br>
-                <input type="checkbox" id="brand-5" name="brand-5">
-                <label class="filter-label"for="brand-5">Tommy Hilfiger</label><br>
-            </div>
-            <div class="filter-column">
-                <h3>Sortieren nach</h3>
-                <input type="checkbox" id="order-1" name="order-1" onclick="checkOnlyOne(1)">
-                <label class="filter-label"for="order-1">Preis aufsteigend</label><br>
-                <input type="checkbox" id="order-2" name="order-2" onclick="checkOnlyOne(2)">
-                <label class="filter-label"or="order-2">Preis absteigend</label><br>
-                <input type="checkbox" id="order-3" name="order-3" onclick="checkOnlyOne(3)">
-                <label class="filter-label"for="order-3">Neuheiten</label><br>
-                <input type="checkbox" id="order-4" name="order-4" onclick="checkOnlyOne(4)">
-                <label class="filter-label"for="order-4">Angebote</label><br>
-            </div>
+          <div class="filter-column">
+            <h3>Saison</h3>
+            <input type="checkbox" id="season-1" name="season-1">
+            <label class="filter-label" for="season-1">Frühjahr</label><br>
+            <input type="checkbox" id="season-2" name="season-2">
+            <label class="filter-label" or="season-2">Sommer</label><br>
+            <input type="checkbox" id="season-3" name="season-3">
+            <label class="filter-label" for="season-3">Herbst</label><br>
+            <input type="checkbox" id="season-4" name="season-4">
+            <label class="filter-label" for="season-4">Winter</label><br>
+          </div>
+          <div class="filter-column">
+            <h3>Geschlecht</h3>
+            <input type="checkbox" id="gender-1" name="gender-1">
+            <label class="filter-label" for="gender-1">Frauen</label><br>
+            <input type="checkbox" id="gender-2" name="gender-2">
+            <label class="filter-label" or="gender-2">Männer</label><br>
+            <input type="checkbox" id="gender-3" name="gender-3">
+            <label class="filter-label" for="gender-3">Mädchen</label><br>
+            <input type="checkbox" id="gender-4" name="gender-4">
+            <label class="filter-label" for="gender-4">Jungen</label><br>
+            <input type="checkbox" id="gender-5" name="gender-5">
+            <label class="filter-label" for="gender-5">Unisex</label><br>
+          </div>
+          <div class="filter-column">
+            <h3>Größe</h3>
+            <input type="checkbox" id="size-1" name="size-1">
+            <label class="filter-label" for="size-1">XS</label><br>
+            <input type="checkbox" id="size-2" name="size-2">
+            <label class="filter-label" or="size-2">S</label><br>
+            <input type="checkbox" id="size-3" name="size-3">
+            <label class="filter-label" for="size-3">M</label><br>
+            <input type="checkbox" id="size-4" name="size-4">
+            <label class="filter-label" for="size-4">L</label><br>
+            <input type="checkbox" id="size-5" name="size-5">
+            <label class="filter-label" for="size-5">XL</label><br>
+          </div>
+          <div class="filter-column">
+            <h3>Marke</h3>
+            <input type="checkbox" id="brand-1" name="brand-1">
+            <label class="filter-label" for="brand-1">Gucci</label><br>
+            <input type="checkbox" id="brand-2" name="brand-2">
+            <label class="filter-label" or="brand-2">Prada</label><br>
+            <input type="checkbox" id="brand-3" name="brand-3">
+            <label class="filter-label" for="brand-3">Dior</label><br>
+            <input type="checkbox" id="brand-4" name="brand-4">
+            <label class="filter-label" for="brand-4">Hugo Boss</label><br>
+            <input type="checkbox" id="brand-5" name="brand-5">
+            <label class="filter-label" for="brand-5">Tommy Hilfiger</label><br>
+          </div>
+          <div class="filter-column">
+            <h3>Sortieren nach</h3>
+            <input type="checkbox" id="order-1" name="order-1" onclick="checkOnlyOne(1)">
+            <label class="filter-label" for="order-1">Preis aufsteigend</label><br>
+            <input type="checkbox" id="order-2" name="order-2" onclick="checkOnlyOne(2)">
+            <label class="filter-label" or="order-2">Preis absteigend</label><br>
+            <input type="checkbox" id="order-3" name="order-3" onclick="checkOnlyOne(3)">
+            <label class="filter-label" for="order-3">Neuheiten</label><br>
+            <input type="checkbox" id="order-4" name="order-4" onclick="checkOnlyOne(4)">
+            <label class="filter-label" for="order-4">Angebote</label><br>
+          </div>
         </div>
-      </div>   
-        <div id="content-area">
-            <div class="detailView" style="position:relative;">
-              <embed style="position:absolute; visibility:hidden; height:100vh; width:85vw;" id="t-shirts"
-                src="./detailView.html?product=T-Shirts" />
-              <embed style="position:absolute; visibility:hidden; height:100vh; width:85vw;" id="jacken"
-                src="./detailView.html?product=Jacken" />
-              <embed style="position:absolute; visibility:hidden; height:100vh; width:85vw;" id="pullover"
-                src="./detailView.html?product=Pullover" />
-            </div>
+      </div>
+      <div id="content-area">
+        <div class="detailView" style="position:relative;">
+          <embed style="position:absolute; display: none; height:100vh; width:85vw;" id="t-shirts"
+            src="./detailView.html?product=t-shirts" />
+          <embed style="position:absolute; display: none; height:100vh; width:85vw;" id="jacken"
+            src="./detailView.html?product=jacken" />
+          <embed style="position:absolute; display: none; height:100vh; width:85vw;" id="pullover"
+            src="./detailView.html?product=pullover" />
         </div>
+      </div>
+    </div>
   </div>
-  </div>
-   <footer class="footer" style="width: 100%; margin: 0px; margin-top: auto;">
+  <footer class="footer" style="width: 100%; margin: 0px; margin-top: auto;">
     <div class="footerElement" onclick="location.href='FooterSites/AGB.html'"> AGB </div>
     <div> - </div>
     <div class="footerElement" onclick="location.href='FooterSites/Impressum.html'"> Impressum </div>
@@ -194,6 +210,6 @@
     <div class="footerElement"> Datenschutz </div>
   </footer>
 </body>
- 
+
 
 </html>

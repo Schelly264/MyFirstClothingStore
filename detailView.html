@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="button">
-		<button onclick="history.back()">zurück</button>
+                <button onclick="backToOverview()">zurück</button>
                 <button style="margin-left:15px;" onclick="updateCart()">in den Warenkorb</button>
             </div>
         </div>
@@ -58,7 +58,7 @@
 
             const products = [
                 {
-                    product: "T-Shirts",
+                    product: "t-shirts",
                     property: "Farbe schwarz",
                     material: "Baumwolle",
                     size: ["S", "M", "L", "XL"],
@@ -67,7 +67,7 @@
                     view: "black_t-shirt_large.png",
                 },
                 {
-                    product: "Jacken",
+                    product: "jacken",
                     property: "Farbe blau",
                     material: "Baumwolle",
                     size: ["S", "M", "L", "XL", "XXL"],
@@ -76,7 +76,7 @@
                     view: "blue_jacket_large.png",
                 },
                 {
-                    product: "Pullover",
+                    product: "pullover",
                     property: "Farbe rot",
                     material: "Baumwolle",
                     size: ["S", "M", "L", "XL"],
@@ -100,7 +100,6 @@
                 $("#img").attr("src", "img/" + product[0].img);
                 $("#large").attr("src", "img/" + product[0].view);
                 magnify("large", 3);
-
             }
 
             var cartCount = 0
@@ -169,6 +168,29 @@
                     y = y - window.pageYOffset;
                     return { x: x, y: y };
                 }
+            }
+
+            function backToOverview() {
+                var params = new window.URLSearchParams(window.location.search);
+                const productName = params.get('product');
+
+                let message = JSON.stringify({
+                    item: ".overview-grid",
+                    attr: "style",
+                    value: "display: grid",
+                });
+                parent.postMessage(message, "*");
+
+                console.log("XXX: " + productName)
+
+                message = JSON.stringify({
+                    item: "#" + productName,
+                    attr: "style",
+                    value: "display: none",
+                });
+                parent.postMessage(message, "*");
+                //$("#t-shirts").css("visibility", "none");
+                //$(".overview-grid").css("display", "visible");
             }
 
         </script>
