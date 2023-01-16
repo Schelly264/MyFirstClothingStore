@@ -114,16 +114,18 @@
                 magnify("large", 3);
             }
 
-            var cartCount = 0
-
             function updateCart() {
+                var count = sessionStorage.getItem("amount");
+                var cartCount = 0
+                count ? cartCount = parseInt(count) : cartCount = 0
                 cartCount += parseInt($("#selAmount").val())
                 const message = JSON.stringify({
-                    item: "#shoppingCart",
-                    attr: "src",
-                    value: cartCount < 4 ? "img/shoppingcart_" + cartCount + ".jpeg" : "img/shoppingcart_x.jpeg",
+                    item: "#amountCart",
+                    attr: "html",
+                    value: cartCount,
                 });
                 parent.postMessage(message, "*");
+                sessionStorage.setItem("amount", cartCount);
             }
 
             // Source https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp

@@ -31,6 +31,16 @@
         check_3.checked = false
       }
     }
+
+    window.onload = setCart;
+    function setCart() {
+      cartCount = sessionStorage.getItem("amount");
+      if (cartCount == null) {
+        cartCount = 0
+      }
+      $("#amountCart").html(cartCount);
+    }
+
   </script>
   <link href="style.css" rel="stylesheet">
 </head>
@@ -49,6 +59,7 @@
       <div class="cart">
         <img id="shoppingCart" border="0" src="img/shoppingcart.jpeg" width="70" height="70"
           onclick="location.href='Warenkorb/warenkorb.html'">
+        <div id="amountCart"></div>
       </div>
       <button type="button" id="login" onclick=login()>
         Einloggen

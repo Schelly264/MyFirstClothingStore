@@ -46,6 +46,8 @@ $(window).on("message", function (m) {
     const prop = message.value.split(":")[0]
     const value = message.value.split(":")[1]
     $(message.item).css(prop, value);
+  } else if (message.attr == "html") {
+    $(message.item).html(message.value);
   } else {
     $(message.item).attr(message.attr, message.value);
   }

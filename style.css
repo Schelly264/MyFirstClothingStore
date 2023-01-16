@@ -134,6 +134,24 @@ body {
   cursor: pointer;
 }
 
+#amountCart {
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  top: 44px;
+  background-color: red;
+  color: white;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
 .overview-grid {
   display: grid;
   width: 100%;
