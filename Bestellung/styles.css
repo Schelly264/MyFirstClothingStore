@@ -1,30 +1,30 @@
 * {
-    font-family: Arial Black;
-    font-weight: 700;
+  font-family: Arial Black;
+  font-weight: 700;
 }
 
 body {
-    margin: 0;
-    min-width: 800px;
+  margin: 0;
+  min-width: 800px;
 }
 
-.flex-container { 
-    display: flex; 
-    flex-direction: column;
-    background-color: #e0e0e0;
-    padding: 72px;
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e0e0e0;
+  padding: 72px;
 }
 
 .header {
-    display: flex;
-    position: relative;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  position: relative;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
   display: flex;
   flex-direction: row;
-  min-height:25px;
+  min-height: 25px;
   background-color: #f1f1f1;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -48,136 +48,134 @@ body {
 }
 
 .header-navbar {
-    overflow: hidden;
-    margin-top: 16px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
-    height: 90px;
-    cursor: pointer;
+  overflow: hidden;
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  height: 90px;
+  cursor: pointer;
 }
 
 .header-navbar-cropped {
-    width: 140px;
-    height: 90px;
+  width: 140px;
+  height: 90px;
 }
 
 .header-name {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .header-shopping-cart {
-    width: 70px;
-    height: 70px;
-    margin-top: 16px;
-    padding: 5px 10px 5px 10px;
-    position: absolute;
-    right: 20px;
+  width: 70px;
+  height: 70px;
+  margin-top: 16px;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  right: 20px;
 }
 
 .header span {
-    flex: 1;
+  flex: 1;
 }
 
+.mfcs-personal-details-primary {
+  margin: auto;
+  width: 550px;
+}
 
+.mfcs-personal-details-primary {
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px 0px 20px 20px;
+}
 
-        .mfcs-personal-details-primary {
-            margin: auto;
-            width: 550px;
-        }
-        
- 
-        
-        .mfcs-personal-details-primary {
-            background-color: rgb(238, 238, 238);
-            border-radius: 10px;
-            border: 1px solid black;
-            padding: 10px 0px 20px 20px;
-        }
+.mfcs-delivery-address {
+  margin: 20px;
+}
 
-        .mfcs-delivery-address {
-            margin: 20px;
-        }
+.mfcs-delivery-address-header-name {
+  font-size: 36px;
+  margin-bottom: 0;
+}
 
-        .mfcs-delivery-address-header-name {
-            font-size: 36px;
-            margin-bottom: 0;
-        }
+.mfcs-delivery-address-details-list {
+  list-style-type: none;
+  margin-left: 25px;
+  padding: 0;
+}
 
-        .mfcs-delivery-address-details-list {
-            list-style-type: none;
-            margin-left: 25px;
-            padding: 0;
-        }
+.mfcs-delivery-address-details-list input {
+  font-weight: 700;
+}
 
-        .mfcs-delivery-address-details-list input {
-            font-weight: 700;
-        }
+.mfcs-delivery-address-details-list-item {
+  padding: 5px;
+}
 
-        .mfcs-delivery-address-details-list-item {
-            padding: 5px;
-        }
+.mfcs-delivery-address-details-list-item input[type="text"] {
+  background-color: #dbdada;
+  border-radius: 4px;
+}
 
-        .mfcs-delivery-address-details-list-item input[type="text"] {
-            background-color: #dbdada;
-            border-radius: 4px;
-        }
+.mfcs-payment-header-name {
+  margin-bottom: 10px;
+}
 
-        .mfcs-payment-header-name {
-            margin-bottom: 10px;
-        }
+.mfcs-payment-actions {
+  display: block;
+  margin-left: 20px;
+}
 
-        .mfcs-payment-actions {
-            display: block;
-            margin-left: 20px;
-        }
+.mfcs-payment-actions button {
+  margin-bottom: 0;
+  margin-right: 7px;
+  width: 100px;
+  height: 25px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
 
-        .mfcs-payment-actions button {
-            margin-bottom: 0;
-            margin-right: 7px;
-            width: 100px;
-            height: 25px;
-            border-radius: 4px;
-            opacity: 0.6;
-        }
+.mfcs-delivery-address-details-list label {
+  margin-right: 10px;
+}
 
-        .mfcs-delivery-address-details-list label {
-            margin-right: 10px;
-        }
+.mfcs-delivery-address-details-list-item-label {
+  font-weight: 500;
+}
 
-        .mfcs-delivery-address-details-list-item-label {
-            font-weight: 500;
-        }
+.mfcs-payment-primary {
+  margin-top: 20px;
+  margin-left: 30px;
+}
 
-        .mfcs-payment-primary {
-            margin-top: 20px;
-            margin-left: 30px;
-        }
+.mfcs-payment-actions-check {
+  color: green;
+  font-size: 26px;
+  opacity: 0.5;
+}
 
-        .mfcs-payment-actions-check {
-            color: green;
-            font-size: 26px;
-            opacity: 0.5;
-        }
+#mfcs-button-paypal {
+  background: linear-gradient(to right, #08398a, #248cce);
+  color: white;
+}
 
-        #mfcs-button-paypal {
-            background: linear-gradient(to right,#08398A, #248CCE);
-            color: white;
-        }
+.mfcs-payment-actions-paypal,
+.mfcs-payment-actions-rechnung,
+.mfcs-payment-actions-klarna {
+  margin-bottom: 8px;
+}
 
-        .mfcs-payment-actions-paypal, .mfcs-payment-actions-rechnung, .mfcs-payment-actions-klarna {
-            margin-bottom: 8px;
-        }
-        
-        .mfcs-payment-button:hover,
-        .mfcs-payment-button:hover ~ span,
-        .mfcs-payment-button:hover ~ .mfcs-payment-button {
-            transition: opacity 0.5s;
-            cursor: pointer;
-            opacity: 1;
-        }
+.mfcs-payment-button:hover,
+.mfcs-payment-button:hover ~ span,
+.mfcs-payment-button:hover ~ .mfcs-payment-button {
+  transition: opacity 0.5s;
+  cursor: pointer;
+  opacity: 1;
+}
 
-        /*
+/*
         svg {
             opacity: 0.5;
         }
@@ -186,55 +184,60 @@ body {
             color: red;
         }
         */
-        #mfcs-button-rechnung {
-            background: rgb(132, 11, 11);
-            color: white;
-        }
+#mfcs-button-rechnung {
+  background: rgb(132, 11, 11);
+  color: white;
+}
 
-        #mfcs-button-klarna {
-            background: #FBB3C7;    
-        }
-        
-        .faded {
-            opacity: 1 !important;
-        }
-        .button-clicked {
-            opacity: 1 !important;
-            transform: scale(1.1);
-        }
-        
-        /*
+#mfcs-button-klarna {
+  background: #fbb3c7;
+}
+
+.faded {
+  opacity: 1 !important;
+}
+.button-clicked {
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+/*
         #check1 {
             background-color: blue;
         }*/
 
-        .mfcs-buy-primary {
-            display: flex;
-            flex-direction: column;
-            margin-top: 58px;
-            margin-left: auto;
-        }
+.mfcs-buy-primary {
+  display: flex;
+  flex-direction: column;
+  margin-top: 58px;
+  margin-left: auto;
+}
 
-        .mfcs-buy-action {
-            display: flex;
-            text-align: right;
-        }
+.mfcs-back-button {
+  width: 70px;
+  cursor: pointer;
+}
 
-        .mfcs-total-price {
-            display: flex;
-            margin-bottom: 10px;
-            font-size: 26px;
-            text-align: right;
-        }
+.mfcs-buy-action {
+  display: flex;
+  text-align: right;
+}
 
-        .mfcs-buy-button {
-            border: 1px solid black;
-            border-radius: 3px;
-            margin-left: 20px;
-            transform: scale(1.5);
-            cursor: pointer;
-        }  
-        
-        .mfcs-buy-button:hover {
-            background-color: #dfdfdf;
-        }
+.mfcs-total-price {
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 26px;
+  text-align: right;
+}
+
+.mfcs-buy-button {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-left: 20px;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.mfcs-buy-button:hover {
+  background-color: #dfdfdf;
+}
