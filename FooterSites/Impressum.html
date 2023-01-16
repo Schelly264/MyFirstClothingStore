@@ -19,23 +19,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
     <body>
-        <div class="header">
-            <div class="header-navbar">
-                <img src="../img/Logo.png" alt="navbar" class="header-navbar-cropped">
-            </div>
-            <h1 class="header-name">
-                MyFirstClothingStore
-            </h1>
-            <img src="../img/shopping_cart.png" alt="shopping_cart" class="header-shopping-cart">
-        </div>
-        <div style="text-align: center;">
+        <div class="flex-header">
+    <div class="brand-logo">
+      <a href="../Home.html">
+        <img src="../img/Logo.png" width="140" height="90">
+      </a>
+    </div>
+    <div id="main-title">
+      HOME
+    </div>
+    <div class="row">
+      <div class="cart" style="padding-right: 10px;">
+        <img id="shoppingCart" border="0" src="../img/shoppingcart.jpeg" width="70" height="70"
+          onclick="location.href='../Warenkorb/warenkorb.html'">
+          <span id="amountCart"> 0 </span>
+      </div>
+      <button type="button" id="login" onclick=login()>
+        Einloggen
+      </button>
+    </div>
+  </div>
+        <div class="flex-container" style="text-align: center;">
             <h2>Impressum von MyFirstClothingStore.</h2>
             <p><strong>Impressum</strong></p>
 <p>Anbieter:<br />MyFirstClothingStore GmbH<br />Musterstraße 1<br />80999 München</p>
 <p>Kontakt:<br />Telefon: 089/1234567-8<br />Telefax: 089/1234567-9<br />E-Mail: kontakt@MyFirstClothingStore.de<br />Website: www.MyFirstClothingStore.de</p>
-        <div class="footer">
-            <a style="padding-right: 10px;" href="../FooterSites/Impressum.html">Impressum</a><a style="padding-left: 10px;" href="../FooterSites/AGB.html">AGB</a>
-        </div>
+</div>
+   <footer class="footer" style="width: 100%; margin: 0px; margin-top: auto;">
+    <div class="footerElement" onclick="location.href='FooterSites/AGB.html'"> AGB </div>
+    <div> - </div>
+    <div class="footerElement" onclick="location.href='FooterSites/Impressum.html'"> Impressum </div>
+    <div> - </div>
+    <div class="footerElement"> Datenschutz </div>
+  </footer>
         <script src="main.js"></script>
     </body>
 </html>

@@ -29,10 +29,11 @@ function login() {
     function showDetailView(product) {
       $(function () {
         if (selectedProduct) {
-          $("#" + selectedProduct).css("visibility", "hidden");
+          $("#" + selectedProduct).css("display", "none");
         }
-        $("#" + product).css("visibility", "visible");
+        $("#" + product).css("display", "block");
         $(".overview-grid").css("display", "none");
+        $(".filter-area").css("display", "none");
         selectedProduct = product;
       });
     }
