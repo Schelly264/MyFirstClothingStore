@@ -1,13 +1,14 @@
 body {
-    display: flex;
-    flex-direction:column;
-    min-height: 100vh;
-    margin: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0px;
 }
+
 .flex-container {
-      display: flex;
-      flex: 1;
-    }
+  display: flex;
+  flex: 1;
+}
 
 .flex-header {
   display: flex;
@@ -23,37 +24,43 @@ body {
   padding-left: 3px;
   padding-right: 3px;
 }
+
 .brand-logo {
-    padding: 20px;
+  padding: 20px;
 }
+
 #main-title {
-    color: black;
-   text-align: center;
-   font-size:  36pt; 
-   font-family: Arial Black;
-   padding: 20px;
+  color: black;
+  text-align: center;
+  font-size: 36pt;
+  font-family: Arial Black;
+  padding: 20px;
 }
+
 #login {
-    color: black;
-      text-align: center;
-      font-size:  10pt; 
-      font-family: Arial Black;
-      background-color: #f1f1f1;
-      height: 40px;
-      margin-left: 15px;
+  color: black;
+  text-align: center;
+  font-size: 10pt;
+  font-family: Arial Black;
+  background-color: #f1f1f1;
+  height: 40px;
+  margin-left: 15px;
 }
+
 .row {
   display: flex;
   flex-direction: row;
 }
+
 #category-title {
-    font-size:  20pt; 
+  font-size: 20pt;
   font-family: Arial Black;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 20px;
   padding-bottom: 10px
 }
+
 .content {
   flex: 1;
   margin: 0px 10px;
@@ -62,7 +69,7 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  min-height:25px;
+  min-height: 25px;
   background-color: #f1f1f1;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -84,6 +91,7 @@ body {
 .footerElement:hover {
   color: red;
 }
+
 .menu {
   font-size: 12pt;
   font-family: Arial Black;
@@ -92,16 +100,20 @@ body {
   cursor: pointer;
   list-style-type: none
 }
+
 .menu li:last-child {
-    margin-bottom: 15px
+  margin-bottom: 15px
 }
+
 .menu a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
+
 .menu a:hover {
   color: red;
 }
+
 .tab {
   font-size: 12pt;
   font-family: Arial Black;
@@ -113,50 +125,72 @@ body {
 .tab:hover {
   color: red;
 }
+
 .tab.indent {
-    padding-left: 20px;
+  padding-left: 20px;
 }
+
 #shoppingCart {
   cursor: pointer;
 }
+
+#amountCart{
+  cursor: pointer;
+  position:absolute; 
+  top: 24px;
+  background-color: red;
+  color: white;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+}
+
 .overview-grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    grid-column-gap:20px; 
-    grid-row-gap: 20px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
+
 .overview-grid-item {
-    border: 1px solid black;
-    padding: 5px;
+  border: 1px solid black;
+  padding: 5px;
 }
+
 .filter-area {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
+
 .filter-title {
-    font-size:  20pt; 
-      font-family: Arial Black;
-      text-align: center;
-      margin-top: 0px;
+  font-size: 20pt;
+  font-family: Arial Black;
+  text-align: center;
+  margin-top: 0px;
 }
+
 .filter-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    grid-column-gap:20px; 
-    grid-row-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
+
 .filter-grid h3 {
-    margin: 0px;
-    font-family: Arial Black;
-    text-decoration: underline;
-    font-size: 20pt;
+  margin: 0px;
+  font-family: Arial Black;
+  text-decoration: underline;
+  font-size: 20pt;
 }
+
 .filter-column {
-    width: 250px;
-    padding: 10px;
-}      
+  width: 250px;
+  padding: 10px;
+}
+
 .filter-label {
-    font-size: 12pt;
-    font-family: Arial Black;
-    cursor: pointer;
+  font-size: 12pt;
+  font-family: Arial Black;
+  cursor: pointer;
 }

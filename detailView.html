@@ -33,6 +33,7 @@
                     <div class="bold">Eigenschaften:</div>
                     <div class="bold">Material:</div>
                     <div class="bold">Größe:</div>
+                    <div class="bold">Anzahl:</div>
                     <div class="price">Preis:</div>
                 </div>
                 <div class="column">
@@ -42,11 +43,16 @@
                         <select name="Auswahl" id="selSize">
                         </select>
                     </div>
+                    <div id="amount">
+                        <select name="Anzahl" id="selAmount">
+                        </select>
+                    </div>
                     <div class="price" id="price"></div>
                 </div>
             </div>
             <div class="button">
-                <button onclick="updateCart()">in den Warenkorb</button>
+                <button onclick="backToOverview()">zurück</button>
+                <button style="margin-left:15px;" onclick="updateCart()">in den Warenkorb</button>
             </div>
         </div>
         <div class="view img-magnifier-container">
@@ -57,28 +63,31 @@
 
             const products = [
                 {
-                    product: "T-Shirts",
+                    product: "t-shirts",
                     property: "Farbe schwarz",
                     material: "Baumwolle",
                     size: ["S", "M", "L", "XL"],
+                    amount: [],
                     price: "4,00 €",
                     img: "black_t-shirt.png",
                     view: "black_t-shirt_large.png",
                 },
                 {
-                    product: "Jacken",
+                    product: "jacken",
                     property: "Farbe blau",
                     material: "Baumwolle",
                     size: ["S", "M", "L", "XL", "XXL"],
+                    amount: [],
                     price: "45,00 €",
                     img: "blue_jacket.png",
                     view: "blue_jacket_large.png",
                 },
                 {
-                    product: "Pullover",
+                    product: "pullover",
                     property: "Farbe rot",
                     material: "Baumwolle",
                     size: ["S", "M", "L", "XL"],
+                    amount: [],
                     price: "20,00 €",
                     img: "red_pullover.png",
                     view: "red_pullover_large.png",
@@ -88,28 +97,32 @@
             function setProduct() {
                 var params = new window.URLSearchParams(window.location.search);
                 const productName = params.get('product');
-                const product = products.filter((p) => p.product === productName);
+                const product = products.filter((p) => p.product === productName.toLowerCase());
                 $(".product").html(productName);
                 $("#property").html(product[0].property);
                 $("#material").html(product[0].material);
                 product[0].size.forEach((c, i) => {
-                    $("#selSize").append('<option value="${product[0].size[0]}">' + product[0].size[i] + '</option>');
+                    $("#selSize").append('<option value="' + product[0].size[i] + '">' + product[0].size[i] + '</option>');
                 });
+                for (i = 1; i <= 10; i++) {
+                    $("#selAmount").append('<option value="' + i + '">' + i.toString() + '</option>');
+                };
                 $("#price").html(product[0].price);
+
                 $("#img").attr("src", "img/" + product[0].img);
                 $("#large").attr("src", "img/" + product[0].view);
                 magnify("large", 3);
-
             }
 
             var cartCount = 0
 
             function updateCart() {
-                cartCount += 1;
-                const message = JSON.stringify({
-                    item: "#shoppingCart",
-                    attr: "src",
-                    value: cartCount < 4 ? "img/shoppingcart_" + cartCount + ".jpeg" : "img/shoppingcart_x.jpeg",
+		cartCount += parseInt($("#selAmount").val())
+                //document.getElementById("amountCart").innerHTML = cartCount;
+		const message = JSON.stringify({
+                    item: "#amountCart",
+                    attr: "innerHTML",
+                    value: cartCount,
                 });
                 parent.postMessage(message, "*");
             }
@@ -170,6 +183,27 @@
                 }
             }
 
+            function backToOverview() {
+                var params = new window.URLSearchParams(window.location.search);
+                const productName = params.get('product').toLowerCase();
+
+                let message = JSON.stringify({
+                    item: ".overview-grid",
+                    attr: "style",
+                    value: "display: grid",
+                });
+                parent.postMessage(message, "*");
+
+                message = JSON.stringify({
+                    item: "#" + productName,
+                    attr: "style",
+                    value: "visibility: hidden",
+                });
+                parent.postMessage(message, "*");
+                //$("#t-shirts").css("visibility", "none");
+                //$(".overview-grid").css("display", "visible");
+            }
+
         </script>
 
         <style>
@@ -190,7 +224,7 @@
                 flex-direction: column;
                 justify-content: space-around;
                 font-size: medium;
-                width: 20rem;
+                width: 25rem;
             }
 
             .row {
@@ -220,22 +254,39 @@
 
             .button {
                 display: flex;
+                flex-direction: row;
                 justify-content: start;
                 margin-left: 15px;
-                width: 200px;
+                width: 350px;
                 height: 50px;
                 font-size: medium;
             }
 
             button {
-                width: 200px;
-                height: 50px;
-                font-size: medium;
+                padding: 10px;
             }
 
             .view {
                 display: flex;
                 align-items: center;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .img-magnifier-container {
+                position: relative;
+            }
+
+            .img-magnifier-glass {
+                position: absolute;
+                border: 3px solid #000;
+                border-radius: 50%;
+                cursor: none;
+                /*Set the size of the magnifier glass:*/
+                width: 100px;
+                height: 100px;
             }
         </style>
 
